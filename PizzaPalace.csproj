@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{06F5626E-6824-4850-ACEA-C3AFBE32BD90}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PizzaPalace</RootNamespace>
+    <AssemblyName>PizzaPalace</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>F:\BACKUP\FINAL YEAR PROJECT\IMPLEMENTATION\Develop\DLL and  Libs\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win64_x64\dotnet\CrystalDecisions.Data.AdoDotNetInterop.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>F:\BACKUP\FINAL YEAR PROJECT\IMPLEMENTATION\Develop\DLL and  Libs\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework">
+      <HintPath>F:\BACKUP\FINAL YEAR PROJECT\IMPLEMENTATION\Develop\DLL and  Libs\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Alert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alert.designer.cs">
+      <DependentUpon>Alert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDashb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDashb.designer.cs">
+      <DependentUpon>frmDashb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewOrders.designer.cs">
+      <DependentUpon>frmViewOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOrder.designer.cs">
+      <DependentUpon>frmOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSplash.designer.cs">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Alert.resx">
+      <DependentUpon>Alert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDashb.resx">
+      <DependentUpon>frmDashb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewOrders.resx">
+      <DependentUpon>frmViewOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrder.resx">
+      <DependentUpon>frmOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSplash.resx">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_user_male_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\astronomy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\available_updates_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back_to_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Brigit Chelangat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Brigit Chelangat1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat-2-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chatting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checked_user_male_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Checkmark_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_24px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_32px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deleted_message_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disconnected_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\discount_finder_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email_send_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engineer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engineer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\euro_money_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exam_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\first_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graduate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graduation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_page_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\last_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maintenance_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\message.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\micro_sd_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\micro_sd_24px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\multiple_messages_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Multiply_18px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\name_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next_page_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no_sim_card_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no_sim_card_24px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\received_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\replace_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reset_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right_2_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_close_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\school_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\secure_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send_file_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_24px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdown_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdown_24px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Singoronik Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Singoronik Logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\speech_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\speech_bubble_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\staff_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student_male_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student_male_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\synchronize_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash_can_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update_file_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upload_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usb_connected_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usb_disconnected_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_64px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_male_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warn_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\weixin_24px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
